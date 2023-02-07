@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Gilded Rose kata in Javascript with Mocha",
   "scripts": {
-    "test": "mocha --require @babel/register",
-    "test:watch": "mocha -r @babel/register --watch --watch-files src/**/*.js,test/**/*.js test/**/*.js"
+    "test": "nyc mocha --require @babel/register",
+    "test:watch": "nyc mocha -r @babel/register --watch --watch-files src/**/*.js,test/**/*.js test/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -27,5 +27,8 @@
     "@babel/register": "^7.13.0",
     "chai": "^4.2.0",
     "mocha": "^8.4.0"
+  },
+  "dependencies": {
+    "nyc": "^15.1.0"
   }
 }
